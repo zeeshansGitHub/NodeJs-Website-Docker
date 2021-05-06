@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-website
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nodejs-website
+    spec:
+      containers:
+      - name: nodejs-website
+        image: zeeshansdocker/nodejs-website::1.0
+        ports:
+      - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-website
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: nodejs-website
+
