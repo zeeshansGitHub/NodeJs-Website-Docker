@@ -21,6 +21,9 @@ Run the following commands to Build and Run the application within a container.
     
     If all goes well above then you should have the container running in your local Docker install
     Access the website by entering the http://localhost:8080 in your browser
+    
+    ## Push to Docker Hub
+    docker push zeeshansdocker/nodejs-website:latest (Please replace 'zeeshansdocker' with your docker accountname)
 
 
 
